@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 175" width="400" height="320">
+  <rect width="200" height="175" fill="#f5f5f5"/>
+  <text x="10" y="20" font-family="Arial, sans-serif" font-size="14" fill="#666">#76</text>
+  <text x="100" y="170" font-family="Arial, sans-serif" font-size="8" fill="#888" text-anchor="middle">RB → RT → LB → RB → LT → T → RT → LT → LB</text>
+  <circle cx="30.0" cy="150.0" r="4" fill="#c33"/>
+  <circle cx="170.0" cy="150.0" r="4" fill="#c33"/>
+  <circle cx="30.0" cy="70.0" r="4" fill="#c33"/>
+  <circle cx="170.0" cy="70.0" r="4" fill="#c33"/>
+  <circle cx="100.0" cy="10.0" r="4" fill="#c33"/>
+  <line x1="170.0" y1="150.0" x2="170.0" y2="70.0"
+      stroke="#333" stroke-width="3" stroke-linecap="round"
+      stroke-dasharray="80.0" stroke-dashoffset="80.0">
+  <animate attributeName="stroke-dashoffset" from="80.0" to="0"
+           dur="0.6s" begin="1.0s" fill="freeze"/>
+</line>
+  <line x1="170.0" y1="70.0" x2="30.0" y2="150.0"
+      stroke="#333" stroke-width="3" stroke-linecap="round"
+      stroke-dasharray="161.2" stroke-dashoffset="161.2">
+  <animate attributeName="stroke-dashoffset" from="161.2" to="0"
+           dur="0.6s" begin="1.6s" fill="freeze"/>
+</line>
+  <line x1="30.0" y1="150.0" x2="170.0" y2="150.0"
+      stroke="#333" stroke-width="3" stroke-linecap="round"
+      stroke-dasharray="140.0" stroke-dashoffset="140.0">
+  <animate attributeName="stroke-dashoffset" from="140.0" to="0"
+           dur="0.6s" begin="2.2s" fill="freeze"/>
+</line>
+  <line x1="170.0" y1="150.0" x2="30.0" y2="70.0"
+      stroke="#333" stroke-width="3" stroke-linecap="round"
+      stroke-dasharray="161.2" stroke-dashoffset="161.2">
+  <animate attributeName="stroke-dashoffset" from="161.2" to="0"
+           dur="0.6s" begin="2.9s" fill="freeze"/>
+</line>
+  <line x1="30.0" y1="70.0" x2="100.0" y2="10.0"
+      stroke="#333" stroke-width="3" stroke-linecap="round"
+      stroke-dasharray="92.2" stroke-dashoffset="92.2">
+  <animate attributeName="stroke-dashoffset" from="92.2" to="0"
+           dur="0.6s" begin="3.5s" fill="freeze"/>
+</line>
+  <line x1="100.0" y1="10.0" x2="170.0" y2="70.0"
+      stroke="#333" stroke-width="3" stroke-linecap="round"
+      stroke-dasharray="92.2" stroke-dashoffset="92.2">
+  <animate attributeName="stroke-dashoffset" from="92.2" to="0"
+           dur="0.6s" begin="4.1s" fill="freeze"/>
+</line>
+  <line x1="170.0" y1="70.0" x2="30.0" y2="70.0"
+      stroke="#333" stroke-width="3" stroke-linecap="round"
+      stroke-dasharray="140.0" stroke-dashoffset="140.0">
+  <animate attributeName="stroke-dashoffset" from="140.0" to="0"
+           dur="0.6s" begin="4.8s" fill="freeze"/>
+</line>
+  <line x1="30.0" y1="70.0" x2="30.0" y2="150.0"
+      stroke="#333" stroke-width="3" stroke-linecap="round"
+      stroke-dasharray="80.0" stroke-dashoffset="80.0">
+  <animate attributeName="stroke-dashoffset" from="80.0" to="0"
+           dur="0.6s" begin="5.4s" fill="freeze"/>
+</line>
+</svg>

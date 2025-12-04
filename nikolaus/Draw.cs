@@ -36,6 +36,32 @@ internal class Draw
         ContinueDrawing(drawing);
     }
 
+    public void GenerateSvgAnimations(string outputDir)
+    {
+        Directory.CreateDirectory(outputDir);
+
+        var successfulDrawings = _drawings
+            .Where(d => d.IsSucceeded)
+            .OrderBy(d => d.ToString())
+            .ToList();
+
+        // Generate individual SVG files
+        for (int i = 0; i < successfulDrawings.Count; i++)
+        {
+            var drawing = successfulDrawings[i];
+            var svg = SvgGenerator.Generate(drawing, i + 1);
+            var fileName = $"house_{i + 1:D3}_{drawing.StartPoint}.svg";
+            var filePath = Path.Combine(outputDir, fileName);
+            File.WriteAllText(filePath, svg);
+        }
+
+        // Generate combined SVG with all houses
+        var combinedSvg = SvgGenerator.GenerateCombined(successfulDrawings);
+        File.WriteAllText(Path.Combine(outputDir, "all_houses.svg"), combinedSvg);
+
+        Console.WriteLine($"Generated {successfulDrawings.Count} individual SVGs and 'all_houses.svg' in '{outputDir}' folder");
+    }
+
     public void PrintReport()
     {
         Console.WriteLine();
@@ -50,6 +76,13 @@ internal class Draw
             {
                 Console.WriteLine($"Started from {startPoint}: can't draw the house of Nicolaus");
             }
+        }
+
+        Console.WriteLine($"SUCCESS:");
+        var succeed = _drawings.Where(d => d.IsSucceeded).OrderBy(d => d.ToString());
+        foreach (var drawing in succeed)
+        {
+            Console.WriteLine(drawing);
         }
     }
 }
